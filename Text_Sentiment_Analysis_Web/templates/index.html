@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Text Sentiment Analysis</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+  <nav class="teal lighten-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Sentiment Analysis</a>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Text Sentiment Classification</h1>
+      <div class="row center">
+        <div class="input-field col s12">
+          <input id="words" type="text" class="validate">
+          <label for="words">Write some words here!</label>
+        </div>
+      </div>
+      <div class="row center">
+        <a id="download-button" class="btn-large waves-effect waves-light teal darken-4">Check</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer teal accent-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Notes from Author</h5>
+        <p class="grey-text text-lighten-4">The classification is trained with Multinomial Naive Bayes. It still need to be improved further for better accuracy.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Machine Learning</h5>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    Author © Yeo Keat
+    <a class="grey-text text-lighten-4 right" href="https://github.com/EeYeoKeat">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+
+</body>
+
+<script>
+
+  $('#download-button').click(function() {
+    $.ajax("{{ url_for('sentiment') }}?text=" + $('#words').val(), {
+      dataType: 'text',
+      timeout: 5000,
+      success: function(data, status, xhr) {
+
+        if (data == '0'){
+          M.toast({
+          html: "Opps! Negative", //must use "double quote"
+          displayLength: 4000
+        })
+        }
+        else if (data == '2'){
+          M.toast({
+            html: "Hmm..Neutral",
+            displayLength: 4000
+          })
+        }
+        else{
+          M.toast({
+            html: "Nice! Positive",
+            displayLength: 4000
+          })
+        }
+
+      },
+      error: function(jqXhr, textStatus, errorMessage) {
+        console.log(errorMessage)
+        M.toast({
+          html: 'Error to get bayes, please try again',
+          displayLength: 4000
+        })
+      }
+    });
+  });
+
+
+
+</script>
+</html>
