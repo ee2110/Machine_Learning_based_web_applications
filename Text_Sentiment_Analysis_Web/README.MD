@@ -5,18 +5,19 @@ This product is a text sentiment analysis web application. The main function is 
 The model still required a big step of improvements to achieve higher accuracy. <br>
 
 #To run the web application in local
-<ul>
-<ol>Download or clone the git repository</ol><br>
+
+<ol>
+<li>Download or clone the git repository</li><br>
 ```
 $ git clone https://github.com/EeYeoKeat/Machine_Learning_based_web_applications.git
 ```
 
-<ol>Change directory to the local repository folder</ol><br>
+<li>Change directory to the local repository folder</li><br>
 ```
 $ cd <change to the folder path>
 ```
 
-<ol></ol><br>
+<li></li><br>
 </ul>
 
 
