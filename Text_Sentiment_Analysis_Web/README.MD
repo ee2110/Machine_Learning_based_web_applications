@@ -8,11 +8,13 @@ The model still required a big step of improvements to achieve higher accuracy. 
 
 <ol>
 <li>Download or clone the git repository</li><br>
-`
+  
+```
 $ git clone https://github.com/EeYeoKeat/Machine_Learning_based_web_applications.git
-`
+```
 
 <li>Change directory to the local repository folder</li><br>
+
 ```
 $ cd <change to the folder path>
 ```
