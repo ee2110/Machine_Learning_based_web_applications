@@ -23,7 +23,7 @@ $ cd <change to the folder path>
 </ul>
 
 
-#Dependencies
+# Dependencies
 <ul>
 <li>Flask</li>
 <li>Numpy</li>
