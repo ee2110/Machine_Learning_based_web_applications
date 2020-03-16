@@ -71,6 +71,16 @@ You may enter any sentence and click “CHECK" button.
 
 <img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/page1.JPG">
 
+# Some Results
+
+For test if the model determine negative sentiment, a word "cry" was entered for testing. It classified it as negative sentiment.
+
+<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/negative.JPG">
+
+For positive, a word "Happy" was entered and the result shows positive sentiment
+
+<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/positive.JPG">
+
 
 # Dependencies
 <ul>
