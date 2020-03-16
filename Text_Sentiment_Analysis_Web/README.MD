@@ -16,10 +16,17 @@ $ git clone https://github.com/EeYeoKeat/Machine_Learning_based_web_applications
 <li>Change directory to the local repository folder</li><br>
 
 ```
-$ cd <change to the folder path>
+$ cd D:\GitHub\Machine_Learning_based_web_applications\Text_Sentiment_Analysis_Web
 ```
 
-<li></li><br>
+###### Perform following action if you have not installed Flask and the packages. Otherwise, if you have installed Flask and the dependencies, you may skipped until step.
+
+<li>Create and manage environment</li><br>
+```
+$ py -m venv env
+```
+
+
 </ul>
 
 
