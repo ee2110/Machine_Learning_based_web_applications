@@ -63,6 +63,13 @@ $ set FLASK_APP=app.py
 $ flask run
 ```
 
+At last step, to terminate application running, press `ctrl+c` and then deactivate the environment before `exit`.
+
+```
+$ deactivate
+```
+
+
 </ul>
 
 # Layout
