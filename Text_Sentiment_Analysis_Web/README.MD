@@ -69,7 +69,7 @@ $ flask run
 
 You may enter any sentence and click “CHECK" button.
 
-<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/page1.JPG"
+<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/page1.JPG">
 
 
 # Dependencies
