@@ -12,6 +12,11 @@ The application is developed by using Flask framework that written in python. Th
 </ol>
 
 
+## Deploy online at Heroku
+
+Please note that, by default, the app is deployed on a free dyno. Free dynos will sleep after a half hour of inactivity (if they don’t receive any traffic). This causes a delay of a few seconds for the first request upon waking.
+
+
 ## Stack and libraries used
 <ol>
   <li>Flask</li>

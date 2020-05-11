@@ -1,8 +1,9 @@
+import Bio
 from Bio import SeqIO
 from concurrent.futures import ProcessPoolExecutor
 import math
 
-fileA = list(SeqIO.parse("inputfile","fasta"))
+fileA = list(SeqIO.parse("cdhitCoronaviridae","fasta"))
 file_id = "output.txt"
 
 def generate_kmers(start, end):
