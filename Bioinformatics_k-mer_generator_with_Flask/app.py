@@ -1,6 +1,7 @@
 import os
 #importing libraries
 from flask import Flask, request, render_template, send_from_directory
+from werkzeug.utils import secure_filename
 
 
 #creating instance of the class
@@ -27,22 +28,24 @@ def generate_kmers(start, end):
 
 
 #to tell flask what url shoud trigger the function index()
-@app.route('/', methods = ['GET'])
+@app.route('/')
 def index():
     return render_template('main.html')
 
-@app.route('/file-downloads', methods = ['POST'])  
-def success():
-	fasta_file = request.files['fasta']
-	fileA = list(SeqIO.parse(fasta_file,"fasta"))
-	n = len(fileA)
-	pool = ProcessPoolExecutor(12)
-	futures = []
-	perCPUSize = math.ceil(n/12)
-	for i in range(0,12):
-		futures.append(pool.submit(generate_kmers, i * perCPUSize, (i+1) * perCPUSize))  
+@app.route('/file-downloads', methods = ['GET', 'POST'])  
+def upload():
+	if request.method == 'POST':
+		fasta_file = request.files['file']
+		fasta_file.save(secure_filename(fasta_file.filename))
+		# fileA = list(SeqIO.parse(fasta_file,"fasta"))
+		# n = len(fileA)
+		# pool = ProcessPoolExecutor(12)
+		# futures = []
+		# perCPUSize = math.ceil(n/12)
+		# for i in range(0,12):
+		# 	futures.append(pool.submit(generate_kmers, i * perCPUSize, (i+1) * perCPUSize))  
 
-	return render_template('generate.html') 
+		return 'file uploaded'
 
 
 if __name__ == '__main__':
