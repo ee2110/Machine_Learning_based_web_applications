@@ -33,7 +33,8 @@ def index():
     return render_template('main.html')
 
 @app.route('/file-downloads', methods = ['GET', 'POST'])  
-def upload():
+def kmer():
+	
 	if request.method == 'POST':
 		fasta_file = request.files['file']
 		fasta_file.save(secure_filename(fasta_file.filename))
