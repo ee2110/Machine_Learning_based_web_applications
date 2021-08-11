@@ -1,4 +1,4 @@
-# Text Sentiment Classification
+﻿# Text Sentiment Classification
 
 This product is a text sentiment analysis web application. The main function is to classify the sentiment of input words or sentence. The classification model is trained by Multinomial Naive Bayes algorithm with 1,600,000 sentences extracted from Tweets. The data set can be obtained from <a href="https://www.kaggle.com/kazanova/sentiment140">Kaggle</a>. <br>
 
@@ -10,7 +10,7 @@ The model still required a big step of improvements to achieve higher accuracy. 
 <li>Download or clone the git repository</li><br>
   
 ```
-$ git clone https://github.com/EeYeoKeat/Machine_Learning_based_web_applications.git
+$ git clone https://github.com/ee2210/Machine_Learning_based_web_applications.git
 ```
 
 <li>Change directory to the local repository folder</li><br>
@@ -76,17 +76,17 @@ $ deactivate
 
 You may enter any sentence and click “CHECK" button.
 
-<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/page1.JPG">
+<img src="https://github.com/ee2110/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/page1.JPG">
 
 # Some Results
 
 For test if the model determine negative sentiment, a word "cry" was entered for testing. It classified it as negative sentiment.
 
-<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/negative.JPG">
+<img src="https://github.com/ee2110/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/negative.JPG">
 
 For positive, a word "Happy" was entered and the result shows positive sentiment
 
-<img src="https://github.com/EeYeoKeat/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/positive.JPG">
+<img src="https://github.com/ee2110/Machine_Learning_based_web_applications/blob/master/Text_Sentiment_Analysis_Web/img/positive.JPG">
 
 
 # Dependencies
